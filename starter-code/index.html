@@ -11,12 +11,12 @@
     <link rel="stylesheet" href="styles/modules.css">
     <link rel="icon" type="image/x-icon" href="https://avatars2.githubusercontent.com/u/18607604?v=3&s=200">
     <script id="myTemplate" type="text/x-handlebars-template">
-      <article id="template">
+      <article id="template" data-category="{{category}}" data-author="{{author}}">
         <h2>{{title}}</h2>
-        <p>{{category}}</p>
-        <a href="{{authorUrl}}">{{author}}</a>        
-        <p>{{publishedOn}}</p>
-        {{{body}}}
+        <address><a href="{{authorUrl}}">{{author}}</a></address>
+        <div class="byline">{{publishedOn}} {{publishStatus}}</div>
+        <section class="article-body">{{{body}}}</section>
+        <a href="#" class="read-on">Read on &rarr;</a>
       </article>
     </script>
   </head>
